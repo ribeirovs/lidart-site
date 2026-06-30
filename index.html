@@ -38,6 +38,15 @@
   .animate-scrollPulse {
       animation: scrollPulse 2.2s ease-in-out infinite;
   }
+
+  /* ===== Responsividade — telas pequenas (celular) ===== */
+  @media (max-width: 640px) {
+      .px-gutter { padding-left: 22px; padding-right: 22px; }
+      .hero-bg-word { font-size: clamp(170px, 50vw, 280px); }
+  }
+  @media (max-width: 380px) {
+      .px-gutter { padding-left: 18px; padding-right: 18px; }
+  }
 </style>
 </head>
 <body class="bg-background text-on-background font-body-md antialiased overflow-x-hidden selection:bg-secondary selection:text-surface">
