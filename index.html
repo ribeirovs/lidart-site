@@ -49,6 +49,23 @@
   @media (max-width: 380px) {
       .px-gutter { padding-left: 18px; padding-right: 18px; }
   }
+
+  /* ===== Melhorias: botoes (hero + CTA final) e acoes por produto ===== */
+  .hero-ctas { display:flex; gap:14px; flex-wrap:wrap; }
+  .la-btn { display:inline-block; font-family:'Manrope',sans-serif; font-size:13.5px; font-weight:600; letter-spacing:.02em; padding:13px 28px; border-radius:2px; text-decoration:none; transition:all .2s; cursor:pointer; }
+  .la-btn-ocre { background:#B07D1A; color:#f9f3e4; }
+  .la-btn-ocre:hover { background:#C99A3F; }
+  .la-btn-outline { background:transparent; color:#F7F3EA; border:1.5px solid rgba(244,239,228,.45); }
+  .la-btn-outline:hover { border-color:#F7F3EA; background:rgba(244,239,228,.06); }
+
+  .la-list-cta { display:inline-block; margin-top:14px; font-family:'Manrope',sans-serif; font-size:12px; font-weight:500; letter-spacing:.02em; color:#F0EBE0; text-decoration:none; border:1.5px solid rgba(244,239,228,.4); padding:7px 16px; border-radius:3px; transition:all .2s; }
+  .la-list-cta:hover { border-color:#F0EBE0; background:rgba(244,239,228,.05); }
+  .la-list-cta--wait { color:#C99A3F; border-color:rgba(201,154,63,.55); }
+  .la-list-cta--wait:hover { background:rgba(201,154,63,.12); border-color:#C99A3F; }
+
+  .la-close { margin-bottom:58px; padding-bottom:52px; border-bottom:1px solid rgba(242,236,221,.13); }
+  .footer-social { font-family:'Manrope',sans-serif; font-size:11.5px; letter-spacing:.02em; color:rgba(155,164,135,.9); text-decoration:none; }
+  .footer-social:hover { color:#f9f3e4; }
 </style>
 </head>
 <body class="bg-background text-on-background font-body-md antialiased overflow-x-hidden selection:bg-secondary selection:text-surface">
@@ -77,9 +94,13 @@
 <div class="max-w-container-max mx-auto w-full relative z-10">
 <div class="font-label-caps text-[10.5px] font-medium text-claro-mute uppercase tracking-[0.12em] mb-7 reveal visible">Metodologia · Lídart</div>
 <h1 class="font-headline-md text-[clamp(68px,9vw,120px)] leading-[0.92] tracking-[-0.025em] font-semibold text-[#F7F3EA] mb-9 reveal reveal-d1 visible">Liderança<br>Aumentada</h1>
-<p class="font-body-md text-[clamp(15px,1.7vw,17.5px)] leading-[1.62] text-[#C5BEA8] max-w-[44ch] mb-[52px] reveal reveal-d2 visible">
+<p class="font-body-md text-[clamp(15px,1.7vw,17.5px)] leading-[1.62] text-[#C5BEA8] max-w-[44ch] mb-9 reveal reveal-d2 visible">
   A capacidade de conduzir a inteligência artificial com critério, governança e autoria.
 </p>
+<div class="hero-ctas reveal reveal-d3 visible">
+<a href="#p2" class="la-btn la-btn-ocre">Conhecer a metodologia</a>
+<a href="mailto:contato@lidart.com.br" class="la-btn la-btn-outline">Falar com a Viviane</a>
+</div>
 </div>
 </section>
 <!-- I PROBLEMA -->
@@ -259,6 +280,7 @@
 <div>
 <div class="font-body-md text-[22px] font-semibold text-[#F0EBE0] leading-[1.15] mb-2">IAteliê</div>
 <div class="font-body-md text-[13.5px] text-[#BEB8A3]/85 leading-[1.52]">Um ambiente onde múltiplos agentes especializados examinam uma decisão complexa sob ângulos distintos. O sistema entrega o material de deliberação e a escolha permanece com quem responde por ela.</div>
+<a class="la-list-cta" href="mailto:contato@lidart.com.br?subject=IAteliê">Quero conhecer →</a>
 </div>
 </div>
 <div class="grid grid-cols-1 md:grid-cols-[170px_1fr] gap-6 items-start py-7 border-b border-[rgba(242,236,221,0.13)]">
@@ -266,6 +288,7 @@
 <div>
 <div class="font-body-md text-[22px] font-semibold text-[#F0EBE0] leading-[1.15] mb-2">C6 Runner</div>
 <div class="font-body-md text-[13.5px] text-[#BEB8A3]/85 leading-[1.52]">Conduz o líder pelas seis coordenadas, projeto a projeto, e registra cada decisão no Documento de Governança.</div>
+<a class="la-list-cta" href="mailto:contato@lidart.com.br?subject=C6 Runner">Quero conhecer →</a>
 </div>
 </div>
 <div class="grid grid-cols-1 md:grid-cols-[170px_1fr] gap-6 items-start py-7 border-b border-[rgba(242,236,221,0.13)]">
@@ -273,6 +296,7 @@
 <div>
 <div class="font-body-md text-[22px] font-semibold text-[#F0EBE0] leading-[1.15] mb-2">Lídart Proposals</div>
 <div class="font-body-md text-[13.5px] text-[#BEB8A3]/85 leading-[1.52]">Plataforma de geração de propostas comerciais estratégicas com agentes especializados, da análise de briefing à entrega do documento final.</div>
+<a class="la-list-cta" href="mailto:contato@lidart.com.br?subject=Lídart Proposals">Quero conhecer →</a>
 </div>
 </div>
 </div>
@@ -281,6 +305,7 @@
 <div>
 <div class="font-body-md text-[22px] font-semibold text-[#F0EBE0] leading-[1.15] mb-2">Lídart Vídeos Academy Agent</div>
 <div class="font-body-md text-[13.5px] text-[#BEB8A3]/85 leading-[1.52]">Converte conhecimento tácito em estrutura de curso com agentes especializados em didática, roteiro e sequenciamento de conteúdo.</div>
+<a class="la-list-cta la-list-cta--wait" href="mailto:contato@lidart.com.br?subject=Academy Agent - Lista de espera">Entrar na lista →</a>
 </div>
 </div>
 </div>
@@ -293,6 +318,7 @@
 <div>
 <div class="font-body-md text-[22px] font-semibold text-[#F0EBE0] leading-[1.15] mb-2">Mentorias</div>
 <div class="font-body-md text-[13.5px] text-[#BEB8A3]/85 leading-[1.52]">Acompanhamento direto na aplicação da metodologia a projetos reais do líder ou da equipe, com diagnóstico de maturidade e plano de desenvolvimento personalizado.</div>
+<a class="la-list-cta" href="mailto:contato@lidart.com.br?subject=Mentorias">Quero conhecer →</a>
 </div>
 </div>
 <div class="grid grid-cols-1 md:grid-cols-[170px_1fr] gap-6 items-start py-7 border-b border-[rgba(242,236,221,0.13)]">
@@ -300,6 +326,7 @@
 <div>
 <div class="font-body-md text-[22px] font-semibold text-[#F0EBE0] leading-[1.15] mb-2">Workshops</div>
 <div class="font-body-md text-[13.5px] text-[#BEB8A3]/85 leading-[1.52]">Imersões práticas nas coordenadas da Liderança Aumentada, desenhadas para o contexto e os desafios específicos de cada organização.</div>
+<a class="la-list-cta" href="mailto:contato@lidart.com.br?subject=Workshops">Quero conhecer →</a>
 </div>
 </div>
 </div>
@@ -340,6 +367,12 @@
 <!-- CTA FINAL -->
 <section class="py-section-v-desktop bg-primary text-surface px-gutter pb-20">
 <div class="max-w-container-max mx-auto">
+<div class="la-close reveal visible">
+<div class="font-label-caps text-[10.5px] font-semibold text-ocre-claro uppercase tracking-[0.1em] mb-5">Próximo passo</div>
+<h2 class="font-headline-md text-[clamp(38px,4.8vw,60px)] font-semibold leading-none tracking-[-0.02em] text-[#F7F3EA] mb-3.5">Pronto para conduzir<br>com mais critério?</h2>
+<p class="font-body-md text-[14px] leading-[1.65] text-claro-mute max-w-[44ch] mb-9">Converse com a Viviane sobre como a metodologia se aplica ao seu contexto.</p>
+<a href="mailto:contato@lidart.com.br?subject=Quero conversar" class="la-btn la-btn-ocre">Agendar uma conversa</a>
+</div>
 <div class="reveal visible">
 <div class="w-12 h-[2px] bg-secondary mb-8"></div>
 <div class="font-headline-md text-[clamp(42px,5.5vw,66px)] font-semibold text-[#F7F3EA] leading-none tracking-[-0.018em] mb-3.5">Viviane Ribeiro</div>
